@@ -53,20 +53,20 @@ engine:                      # Engine settings.
   online_moves:
     chessdb_book:
       enabled: true
-      min_time: 20
+      min_time: 120
       move_quality: "best"   # One of "all", "good", "best".
-      min_depth: 100          # Only for move_quality: "best".
+      min_depth: 50          # Only for move_quality: "best".
       contribute: true
     lichess_cloud_analysis:
       enabled: true
-      min_time: 20
+      min_time: 120
       move_quality: "best"   # One of "good", "best".
       max_score_difference: 50 # Only for move_quality: "good". The maximum score difference (in cp) between the best move and the other moves.
-      min_depth: 100
-      min_knodes: 9000
+      min_depth: 90
+      min_knodes: 8000
     online_egtb:
       enabled: true
-      min_time: 20
+      min_time: 120
       max_pieces: 7
       source: "lichess"      # One of "lichess", "chessdb".
       move_quality: "best"   # One of "good", "best".
@@ -97,7 +97,7 @@ uci_options:               # Arbitrary UCI options passed to the engine.
  option name UCI_Elo type spin : 2850
  option name Use NNUE type check : true
  option name EvalFile type string : nnue.nnue
- option name movetime type spin : 900
+ option name movetime type spin : 500
 # go_commands:             # Additional options to pass to the UCI go command.
 #   nodes: 100000               # Search so many nodes only.
 #   depth: 565               # Search depth ply only.
@@ -117,7 +117,7 @@ silence_stderr: false      # Some engines (yes you, Leela) are very noisy.
 abort_time: 60               # Time to abort a game in seconds when there is no activity.
 fake_think_time: false       # Artificially slow down the bot to pretend like it's thinking.
 rate_limiting_delay: 0       # Time (in ms) to delay after sending a move to prevent "Too Many Requests" errors.
-move_overhead: 800          # Increase if your bot flags games too often.
+move_overhead: 200          # Increase if your bot flags games too often.
 
 correspondence:
     move_time: 60            # Time in seconds to search in correspondence games.
