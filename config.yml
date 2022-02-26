@@ -1,7 +1,7 @@
 token: "lip_wDzDPU66qxgxZGvyj0sB"    # Lichess OAuth2 Token.url: "https://lichess.org/"  # Lichess base URL.
 
 engine:                      # Engine settings.
-  dir: "/"          # Directory containing the engine. This can be an absolute path or one relative to lichess-bot/.
+  dir: "./"          # Directory containing the engine. This can be an absolute path or one relative to lichess-bot/.
   name: "stockfish_x64_modern"        # Binary name of the engine to use.
   working_dir: ""            # Directory where the chess engine will read and write files. If blank or missing, the current directory is used.
   protocol: "uci"            # "uci" or "xboard"
@@ -77,10 +77,10 @@ engine:                      # Engine settings.
     Move Overhead: 5000       # Increase if your bot flags games too often.
     Threads: 2               # Max CPU threads the engine can use.
     Hash: 512                # Max memory (in megabytes) the engine can allocate.
-   go_commands:             # Additional options to pass to the UCI go command.
-     nodes: 100000               # Search so many nodes only.
-     depth: 245               # Search depth ply only.
-     movetime: 1         # Integer. Search exactly movetime milliseconds.
+  go_commands:             # Additional options to pass to the UCI go command.
+    nodes: 100000               # Search so many nodes only.
+    depth: 245               # Search depth ply only.
+    movetime: 10         # Integer. Search exactly movetime milliseconds.
 # xboard_options:            # Arbitrary XBoard options passed to the engine.
 #   cores: "4"
 #   memory: "4096"
