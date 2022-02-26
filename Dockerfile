@@ -22,8 +22,11 @@ Run 7z e Cerebellum3Merge.bin.7z && rm Cerebellum3Merge.bin.7z
 #RUN wget --no-check-certificate "https://fbserv.herokuapp.com/file/books/threeCheck.bin" -O threeCheck.bin
 #RUN wget --no-check-certificate "https://fbserv.herokuapp.com/file/books/kingOfTheHill.bin" -O kingofthehill.bin
 
-RUN bash makefish.sh
+#NNUE
+RUN wget --no-check-certificate "https://tests.stockfishchess.org/api/nn/nn-edad5b1b0eb0.nnue" -O nnue.nnue
 
+#Build Engine
+RUN bash makefish.sh
 RUN rm -R Stockfish-master
 RUN rm master.zip
 
