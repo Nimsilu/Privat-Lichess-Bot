@@ -97,10 +97,10 @@ uci_options:               # Arbitrary UCI options passed to the engine.
  option name UCI_Elo type spin : 2850
  option name Use NNUE type check : true
  option name EvalFile type string : nnue.nnue
-# go_commands:             # Additional options to pass to the UCI go command.
+  go_commands:             # Additional options to pass to the UCI go command.
 #   nodes: 100000               # Search so many nodes only.
 #   depth: 565               # Search depth ply only.
-#   movetime: 500         # Integer. Search exactly movetime milliseconds.
+    movetime: 1000         # Integer. Search exactly movetime milliseconds.
 # xboard_options:            # Arbitrary XBoard options passed to the engine.
 #   cores: "4"
 #   memory: "4096"
