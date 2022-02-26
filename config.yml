@@ -75,13 +75,32 @@ engine:                      # Engine settings.
   homemade_options:
 #   Hash: 256
   uci_options:               # Arbitrary UCI options passed to the engine.
-    Move Overhead: 800       # Increase if your bot flags games too often.
-    Threads: 2               # Max CPU threads the engine can use.
-    Hash: 512                # Max memory (in megabytes) the engine can allocate.
-  go_commands:             # Additional options to pass to the UCI go command.
-    nodes: 100000               # Search so many nodes only.
-    depth: 565               # Search depth ply only.
-    movetime: 500         # Integer. Search exactly movetime milliseconds.
+option name Contempt type spin : 24
+option name Analysis Contempt type combo : Both var Off var White var Black var Both
+option name Threads type spin : 20
+option name Hash type spin : 33554432
+option name Ponder type check : true
+option name Ponder type check : true
+option name MultiPV type spin : 1
+option name Skill Level type spin : 20
+option name Move Overhead type spin : 5000
+option name nodestime type spin : 0
+option name UCI_Chess960 type check : false
+option name UCI_AnalyseMode type check : false
+option name UCI_LimitStrength type check : false
+option name UCI_Elo type spin : 2850
+option name UCI_ShowWDL type check : false
+option name SyzygyPath type string : <empty>
+option name SyzygyProbeDepth type spin : 100
+option name Syzygy50MoveRule type check : true
+option name SyzygyProbeLimit type spin : 7
+option name UCI_Elo type spin : 2850
+option name Use NNUE type check : true
+option name EvalFile type string : nnue.nnue
+# go_commands:             # Additional options to pass to the UCI go command.
+#   nodes: 100000               # Search so many nodes only.
+#   depth: 565               # Search depth ply only.
+#   movetime: 500         # Integer. Search exactly movetime milliseconds.
 # xboard_options:            # Arbitrary XBoard options passed to the engine.
 #   cores: "4"
 #   memory: "4096"
@@ -142,4 +161,4 @@ greeting:
     #   {me} to insert bot's name
     # Any other words in curly braces will be removed.
     hello: "Hi! Good luck @{opponent} ! Type !help for a list of commands I can respond to." # Message to send to chat at the start of a game
-    goodbye: "Good game!" # Message to send to chat at the end of a game
+    goodbye: "Good game!" # Message to send to chat at the end of a gameoption name EvalFile type string
