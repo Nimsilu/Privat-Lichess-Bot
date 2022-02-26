@@ -37,9 +37,9 @@ engine:                      # Engine settings.
 #       - engines/atomicbook2.bin
 #     etc.
 #     Use the same pattern for 'giveaway' (antichess), 'crazyhouse', 'horde', 'kingofthehill', 'racingkings' and '3check' as well.
-    min_weight: 65534            # Does not select moves with weight below min_weight (min 0, max: 65535).
+    min_weight: 100            # Does not select moves with weight below min_weight (min 0, max: 65535).
     selection: "best_move" # Move selection is one of "weighted_random", "uniform_random" or "best_move" (but not below the min_weight in the 2nd and 3rd case).
-    max_depth: 565             # Half move max depth.
+    max_depth: 245             # Half move max depth.
   draw_or_resign:
     resign_enabled: false
     resign_score: -1000      # If the score is less than or equal to this value, the bot resigns (in cp).
@@ -55,15 +55,15 @@ engine:                      # Engine settings.
       enabled: true
       min_time: 20
       move_quality: "best"   # One of "all", "good", "best".
-      min_depth: 245          # Only for move_quality: "best".
+      min_depth: 100          # Only for move_quality: "best".
       contribute: true
     lichess_cloud_analysis:
       enabled: true
       min_time: 20
       move_quality: "best"   # One of "good", "best".
       max_score_difference: 50 # Only for move_quality: "good". The maximum score difference (in cp) between the best move and the other moves.
-      min_depth: 250
-      min_knodes: 9900
+      min_depth: 100
+      min_knodes: 9000
     online_egtb:
       enabled: true
       min_time: 20
@@ -97,7 +97,7 @@ uci_options:               # Arbitrary UCI options passed to the engine.
  option name UCI_Elo type spin : 2850
  option name Use NNUE type check : true
  option name EvalFile type string : nnue.nnue
- option name movetime type spin : 1000
+ option name movetime type spin : 900
 # go_commands:             # Additional options to pass to the UCI go command.
 #   nodes: 100000               # Search so many nodes only.
 #   depth: 565               # Search depth ply only.
