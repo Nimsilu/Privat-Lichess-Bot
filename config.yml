@@ -27,6 +27,7 @@ engine:                      # Engine settings.
         - komodo.bin
         - elo3300.bin
         - Cerebellum3Merge.bin
+        - lichess_torombot_2022-03-04.bin
       atomic: # list of book file paths for variant atomic
         - atomic.bin
       antichess:
