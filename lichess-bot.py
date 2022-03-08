@@ -263,7 +263,7 @@ def play_game(li, game_id, control_queue, user_profile, config, challenge_queue,
     draw_or_resign_cfg = engine_cfg.get("draw_or_resign") or {}
 
     greeting_cfg = config.get("greeting") or {}
-    keyword_map = defaultdict(str, me=game.me.name, opponent=game.opponent.name title=game.opponent.title)
+    keyword_map = defaultdict(str, me=game.me.name, opponent=game.opponent.name)
     get_greeting = lambda greeting: str(greeting_cfg.get(greeting) or "").format_map(keyword_map)
     hello = get_greeting("hello")
     goodbye = get_greeting("goodbye")
