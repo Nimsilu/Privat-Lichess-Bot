@@ -27,7 +27,7 @@ from http.client import RemoteDisconnected
 
 logger = logging.getLogger(__name__)
 
-__version__ = "1.2.0"
+__version__ = "1.0.0"
 
 terminated = False
 
@@ -263,7 +263,7 @@ def play_game(li, game_id, control_queue, user_profile, config, challenge_queue,
     draw_or_resign_cfg = engine_cfg.get("draw_or_resign") or {}
 
     greeting_cfg = config.get("greeting") or {}
-    keyword_map = defaultdict(str, me=game.me.name, opponent=game.opponent.name)
+    keyword_map = defaultdict(str, me=game.me.name, opponent=game.opponent.name title=game.opponent.title)
     get_greeting = lambda greeting: str(greeting_cfg.get(greeting) or "").format_map(keyword_map)
     hello = get_greeting("hello")
     goodbye = get_greeting("goodbye")
@@ -788,11 +788,12 @@ def print_pgn_game_record(config, game, board, engine, start_datetime):
 
 def intro():
     return r"""
-    .   _/|
-    .  // o\
-    .  || ._)  lichess-bot %s
-    .  //__\
-    .  )___(   Play on Lichess with a bot
+    .  _ _ _                 _             _     __ _     _
+    . | (_) | __ _       ___| |_ ___   ___| | __/ _(_)___| |__
+    . | | | |/ _` |_____/ __| __/ _ \ / __| |/ / |_| / __| '_ \
+    . | | | | (_| |_____\__ \ || (_) | (__|   <|  _| \__ \ | | |
+    . |_|_|_|\__,_|     |___/\__\___/ \___|_|\_\_| |_|___/_| |_|  lila-stockfish %s
+                                                                 Play on Lichess with a bot
     """ % __version__
 
 
