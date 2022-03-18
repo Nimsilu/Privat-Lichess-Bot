@@ -18,7 +18,7 @@ engine:                      # Engine settings.
     enabled: true           # Activate polyglot book.
     book:
       standard:              # List of book file paths for variant standard.
-        - M11.2_bin
+        - elo3300.bin
         - lichess_torombot_2022-03-04.bin
       atomic: # list of book file paths for variant atomic
         - atomic.bin
