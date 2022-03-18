@@ -20,7 +20,7 @@ RUN wget --no-check-certificate "https://fbserv.herokuapp.com/file/books/kingOfT
 
 RUN wget --no-check-certificate "https://github.com/Nimsilu/bots-un/raw/master/engines/fsf_linux" -O fsf
 RUN wget --no-check-certificate "https://abrok.eu/stockfish/builds/f3a2296e591d09dd50323fc3f96e800f5538d8bb/linux64modern/stockfish_22031308_x64_modern.zip" -O chess-engine.zip
-RUN wget --no-check-cerificate "https://github.com/TheDarkGrandmaster2/masterbotheroku/raw/master/engines/fsf" msf
+RUN wget --no-check-cerificate "https://github.com/TheDarkGrandmaster2/masterbotheroku/raw/master/engines/fsf" -O msf
 RUN 7z e chess-engine.zip && rm chess-engine.zip && mv stockfish* chess-engine
 
 COPY requirements.txt .
