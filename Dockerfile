@@ -10,9 +10,6 @@ RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selectio
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y sudo curl apt-utils libqt5gui5 python3-psutil wget python3 python3-pip p7zip-full git build-essential
 
-RUN wget --no-check-certificate -nv "https://workupload.com/start/E5atKBeeYW8" -O M11.2_bin.7z \
-&& 7z e M11.2_bin.7z && rm M11.2_bin.7z
-
 #add variant books 
 RUN wget --no-check-certificate "https://fbserv.herokuapp.com/file/books/antichess.bin" -O antichess.bin
 RUN wget --no-check-certificate "https://fbserv.herokuapp.com/file/books/atomic.bin" -O atomic.bin
