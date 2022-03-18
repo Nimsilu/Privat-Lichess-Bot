@@ -1,8 +1,8 @@
 FROM ubuntu:impish
 ENV DEBIAN_FRONTEND noninteractive
-MAINTAINER Davin
-RUN echo Davin
-CMD echo Davin
+MAINTAINER Bongi
+RUN echo Bongi
+CMD echo Bongi
 COPY . .
 
 
