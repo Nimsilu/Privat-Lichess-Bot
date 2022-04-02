@@ -18,8 +18,8 @@ engine:                      # Engine settings.
     enabled: true           # Activate polyglot book.
     book:
       standard:              # List of book file paths for variant standard.
-        - lichess-book.bin
         - Cerebellum3Merge.bin
+        - lichess-book.bin
       atomic: # list of book file paths for variant atomic
         - atomic.bin
       antichess:
@@ -78,10 +78,10 @@ engine:                      # Engine settings.
  
 option name Contempt type spin : 24
 option name Analysis Contempt type combo : Both var Off var White var Black var Both
-option name Threads type spin : 14
-option name Hash type spin : 14048
+option name Threads type spin : 8
+option name Hash type spin : 17999
 option name Ponder type check : true
-option name MultiPV type spin : 11
+option name MultiPV type spin : 70
 option name Skill Level type spin : 20
 option name Move Overhead type spin : 5000
 option name nodestime type spin : 0
@@ -95,7 +95,7 @@ option name SyzygyProbeDepth type spin : 100
 option name Syzygy50MoveRule type check : true
 option name SyzygyProbeLimit type spin : 7
 option name Use NNUE type check : true
-option name Slow Mover: 40
+option name Slow Mover: 30
 #    go_commands:             # additional options to pass to the UCI go command
 #      nodes: 5000               # Search so many nodes only.
 #      depth: 20               # Search depth ply only.
