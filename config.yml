@@ -1,4 +1,4 @@
-token: "lip_sLIWgjnkNvWkdCaNvn8N"    # Lichess OAuth2 Token.
+token: "lip_EQWGhLWMCxYaBJXpcwS6"    # Lichess OAuth2 Token.
 url: "https://lichess.org/"  # Lichess base URL.
 
 engine:                      # Engine settings.
@@ -19,7 +19,8 @@ engine:                      # Engine settings.
     book:
       standard:              # List of book file paths for variant standard.
         - elo3300.bin
-        - lichess_torombot_2022-03-04.bin
+        - Goi5.1.bin
+        - Cerebellum3Merge.bin
       atomic: # list of book file paths for variant atomic
         - atomic.bin
       antichess:
@@ -144,7 +145,7 @@ greeting:
     #   {opponent} to insert opponent's name
     #   {me} to insert bot's name
     # Any other words in curly braces will be removed.
-    hello: "Hi! I'm {me}. Good luck! Type !help for a list of commands I can respond to." # Message to send to chat at the start of a game
-    goodbye: "Good game!" # Message to send to chat at the end of a game
+    #hello: "Hi! I'm {me}. Good luck! Type !help for a list of commands I can respond to." # Message to send to chat at the start of a game
+    #goodbye: "Good game!" # Message to send to chat at the end of a game
 
 # pgn_directory: "game_records" # A directory where PGN-format records of the bot's games are kept
