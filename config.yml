@@ -82,9 +82,9 @@ option name Analysis Contempt type combo : Both var Off var White var Black var 
 option name Threads type spin : 20
 option name Hash type spin : 32768
 option name Ponder type check : true
-option name MultiPV type spin : 1
+option name MultiPV type spin : 4
 option name Skill Level type spin : 20
-option name Move Overhead type spin : 1000
+option name Move Overhead type spin : 5000
 option name nodestime type spin : 0
 option name UCI_Chess960 type check : false
 option name UCI_AnalyseMode type check : false
@@ -96,6 +96,7 @@ option name SyzygyProbeDepth type spin : 100
 option name Syzygy50MoveRule type check : true
 option name SyzygyProbeLimit type spin : 7
 option name Use NNUE type check : true
+option name Slow Mover: 40
 #    go_commands:             # additional options to pass to the UCI go command
 #      nodes: 5000               # Search so many nodes only.
 #      depth: 20               # Search depth ply only.
