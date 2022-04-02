@@ -788,12 +788,11 @@ def print_pgn_game_record(config, game, board, engine, start_datetime):
 
 def intro():
     return r"""
-    .  _ _ _                 _             _     __ _     _
-    . | (_) | __ _       ___| |_ ___   ___| | __/ _(_)___| |__
-    . | | | |/ _` |_____/ __| __/ _ \ / __| |/ / |_| / __| '_ \
-    . | | | | (_| |_____\__ \ || (_) | (__|   <|  _| \__ \ | | |
-    . |_|_|_|\__,_|     |___/\__\___/ \___|_|\_\_| |_|___/_| |_|  lila-stockfish %s
-                                                                 Play on Lichess with a bot
+    .   _/|
+    .  // o\
+    .  || ._)  lichess-bot %s
+    .  //__\
+    .  )___(   Play on Lichess with a bot
     """ % __version__
 
 
