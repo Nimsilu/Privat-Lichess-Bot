@@ -19,7 +19,6 @@ engine:                      # Engine settings.
     book:
       standard:              # List of book file paths for variant standard.
         - lichess-book.bin
-        - Goi5.1.bin
         - Cerebellum3Merge.bin
       atomic: # list of book file paths for variant atomic
         - atomic.bin
@@ -49,7 +48,7 @@ engine:                      # Engine settings.
     offer_draw_enabled: true
     offer_draw_score: 0      # If the absolute value of the score is less than or equal to this value, the bot offers/accepts draw (in cp).
     offer_draw_for_egtb_zero: true # If true the bot will offer/accept draw in positions where the online_egtb returns a wdl of 0.
-    offer_draw_moves: 5      # How many moves in a row the absolute value of the score has to be below the draw value.
+    offer_draw_moves: 10      # How many moves in a row the absolute value of the score has to be below the draw value.
     offer_draw_pieces: 10    # Only if the pieces on board are less than or equal to this value, the bot offers/accepts draw.
   online_moves:
     chessdb_book:
@@ -79,8 +78,8 @@ engine:                      # Engine settings.
  
 option name Contempt type spin : 24
 option name Analysis Contempt type combo : Both var Off var White var Black var Both
-option name Threads type spin : 20
-option name Hash type spin : 32768
+option name Threads type spin : 14
+option name Hash type spin : 14048
 option name Ponder type check : true
 option name MultiPV type spin : 11
 option name Skill Level type spin : 20
