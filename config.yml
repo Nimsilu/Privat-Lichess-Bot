@@ -4,8 +4,8 @@ url: "https://lichess.org/"  # Lichess base URL.
 engine:                      # Engine settings.
   dir: "./"          # Directory containing the engine. This can be an absolute path or one relative to lichess-bot/.
   name: "chess-engine"        # Binary name of the engine to use.
-  Atomic: "fsf"  # Binary name of the engine for atomic variant to use.
-  Antichess: "fsf"  # Binary name of the engine for antichess variant to use.
+  Atomic: "fsf_linux"  # Binary name of the engine for atomic variant to use.
+  Antichess: "fsf_linux"  # Binary name of the engine for antichess variant to use.
   Crazyhouse: "fsf_linux"  # Binary name of the engine for crazyhouse variant to use.
   Horde: "fsf_linux"   # Binary name of the engine for horde variant to use.
   King of the Hill: "fsf_linux"   # Binary name of the engine for koth variant to use.
@@ -18,7 +18,7 @@ engine:                      # Engine settings.
     enabled: true           # Activate polyglot book.
     book:
       standard:              # List of book file paths for variant standard.
-        - elo3300.bin
+        -
         - Goi5.1.bin
         - Cerebellum3Merge.bin
       atomic: # list of book file paths for variant atomic
@@ -82,7 +82,7 @@ option name Analysis Contempt type combo : Both var Off var White var Black var 
 option name Threads type spin : 20
 option name Hash type spin : 32768
 option name Ponder type check : true
-option name MultiPV type spin : 4
+option name MultiPV type spin : 6
 option name Skill Level type spin : 20
 option name Move Overhead type spin : 5000
 option name nodestime type spin : 0
@@ -96,7 +96,7 @@ option name SyzygyProbeDepth type spin : 100
 option name Syzygy50MoveRule type check : true
 option name SyzygyProbeLimit type spin : 7
 option name Use NNUE type check : true
-option name Slow Mover: 40
+option name Slow Mover: 30
 #    go_commands:             # additional options to pass to the UCI go command
 #      nodes: 5000               # Search so many nodes only.
 #      depth: 20               # Search depth ply only.
