@@ -18,7 +18,7 @@ engine:                      # Engine settings.
     enabled: true           # Activate polyglot book.
     book:
       standard:              # List of book file paths for variant standard.
-        -
+        - lichess-book.bin
         - Goi5.1.bin
         - Cerebellum3Merge.bin
       atomic: # list of book file paths for variant atomic
