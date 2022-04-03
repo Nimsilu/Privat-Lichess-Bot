@@ -79,7 +79,7 @@ engine:                      # Engine settings.
     Threads: 4               # Max CPU threads the engine can use.
     Hash: 380                # Max memory (in megabytes) the engine can allocate.
     MultiPV: 4
-    SkillLevel: 20
+    Skill Level: 20
     Slow Mover: 40
 #   go_commands:             # Additional options to pass to the UCI go command.
 #     nodes: 1               # Search so many nodes only.
