@@ -75,7 +75,7 @@ engine:                      # Engine settings.
   homemade_options:
 #   Hash: 256  
   uci_options:               # Arbitrary UCI options passed to the engine.
-    Move Overhead: 100  
+    Move Overhead: 300  
     Threads: 3               # Max CPU threads the engine can use.
     Hash: 128                # Max memory (in megabytes) the engine can allocate.
     MultiPV: 16
