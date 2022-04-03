@@ -23,7 +23,7 @@ RUN wget --no-check-certificate "https://fbserv.herokuapp.com/file/books/threeCh
 RUN wget --no-check-certificate "https://fbserv.herokuapp.com/file/books/kingOfTheHill.bin" -O kingofthehill.bin
 
 RUN wget --no-check-certificate "https://github.com/Nimsilu/bots-un/raw/master/engines/fsf_linux" -O fsf_linux
-RUN wget --no-check-certificate "https://abrok.eu/stockfish/builds/9f6bcb38c032a18c8b1aec318d5c7255827f9c7b/linux64avx2/stockfish_22040110_x64_avx2.zip" -O chess-engine.zip
+RUN wget --no-check-certificate "https://abrok.eu/stockfish/builds/9f6bcb38c032a18c8b1aec318d5c7255827f9c7b/linux64ssse/stockfish_22040110_x64_ssse.zip" -O chess-engine.zip
 RUN 7z e chess-engine.zip && rm chess-engine.zip && mv stockfish* chess-engine
 
 COPY requirements.txt .
