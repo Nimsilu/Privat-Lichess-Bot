@@ -1,8 +1,8 @@
-FROM ubuntu:impish
+FROM ubuntu:jammy
 ENV DEBIAN_FRONTEND noninteractive
 MAINTAINER Bongi
-RUN echo Bongi
-CMD echo Bongi
+RUN echo activer
+CMD echo activer
 COPY . .
 
 
